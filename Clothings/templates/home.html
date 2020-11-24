@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+<h1>CLOTHINGS</h1>
+<div class="row">
+    {%for cloth in Clothing%}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{cloth.image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{cloth.name}}</h5>
+                <p class="card-text">${{cloth.price}}</p>
+                <a href="#" class="btn btn-primary">add to cart</a>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}
